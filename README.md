@@ -1,6 +1,6 @@
 # PodRace
 
-![Alt text](temporary/pd-client-service/image-1.png)
+![Alt text](pd-client-service/image-1.png)
 
 PodRace is a FullStack application created by some Dev/IT's enthusiasts based in a microservice architecture to generate HTTP request, events, logs and infrastructure metrics for testing monitoring tools (such as Datadog) in a real and fun environment.
 
