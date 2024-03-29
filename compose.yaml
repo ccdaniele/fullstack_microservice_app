@@ -1,0 +1,20 @@
+services:
+  pdclient:
+    image: ccdaniele/pdrace-client:v1
+    ports:
+      - "3002:3002"
+    hostname: pdclient
+    networks:
+      pdnetwork: 
+          aliases:
+            - pdclient
+    
+  pdapi:
+    image: ccdaniele/pdrace-usersapi:v1-sqlite
+    ports:
+      - "3000:3000"
+    networks:
+      - pdnetwork
+    hostname: pdapi
+networks:
+  pdnetwork: {}

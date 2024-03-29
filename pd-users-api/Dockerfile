@@ -1,5 +1,4 @@
 # with sqlite db
-
 FROM ruby:3.2.2
 WORKDIR /pd-users-api
 COPY . . 
