@@ -83,3 +83,5 @@ localhost:3000/api/v2/users
 ```
 rake sneakers:run
 ```
+
+docker build --platform=linux/amd64 -t ccdaniele/pdrace-users-api:aldrick_base_v1.0_postgres . 

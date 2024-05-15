@@ -1,4 +1,5 @@
-db create
-db migrate
-db seed
-s
+#!/bin/bash
+
+bin/rails db:migrate
+bin/rails db:seed
+bin/rails s
