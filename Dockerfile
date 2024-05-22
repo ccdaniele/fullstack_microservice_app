@@ -5,5 +5,5 @@ ENV BUNDLE_PATH /gems
 RUN bundle install
 RUN chmod +x /pd-user-api/start.sh
 # ENTRYPOINT [ "bin/rails" ]
-CMD ["/pd-user-api/start.sh"]
 EXPOSE 3000
+CMD ["/pd-user-api/start.sh"]

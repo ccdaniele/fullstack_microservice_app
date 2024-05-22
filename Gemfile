@@ -6,9 +6,9 @@ ruby "3.2.2"
 gem "rails", "~> 7.1.1"
 
 # Use sqlite3 as the database for Active Record
-# gem "sqlite3", "~> 1.4"
+gem "sqlite3", "~> 1.4"
 
-gem 'pg', '~> 1.5', '>= 1.5.4'
+# gem 'pg', '~> 1.5', '>= 1.5.4'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
@@ -29,15 +29,18 @@ gem "puma", ">= 5.0"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
+gem "bootsnap", require: true
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
+
+
 gem "rack-cors"
 
 gem 'active_model_serializers'
+
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -52,7 +55,7 @@ group :development do
 
 gem 'lograge'
 
-# gem 'ddtrace', require: 'ddtrace/auto_instrument'
+gem 'ddtrace', '1.22', require: 'ddtrace/auto_instrument'
 
 # gem "dogstatsd-ruby"
 
