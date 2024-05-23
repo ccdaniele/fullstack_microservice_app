@@ -14,8 +14,9 @@ class Api::V2::UsersController < ApplicationController
 
   # POST /users
   def create
+    # byebug
     @user = User.create(user_params)
-
+    
       if @user.valid?
         render json: { user: UserSerializer.new(@user)}, status: :created
       else

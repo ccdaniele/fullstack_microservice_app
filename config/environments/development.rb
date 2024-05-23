@@ -68,7 +68,13 @@ Rails.application.configure do
     IPAddr.new("0.0.0.0/0"),        # All IPv4 addresses.
     IPAddr.new("::/0"),             # All IPv6 addresses.
     "localhost",                    # The localhost reserved domain.
-    "pdclient:3000",
-    "pd-api-svc.default.svc.cluster.local:3000"
-]
+    "api",
+  ]
+
+  config.host_authorization = {
+  response_app: -> env do
+    [400, { "Content-Type" => "text/plain" }, ["Bad Request"]]
+  end
+  }
+
 end

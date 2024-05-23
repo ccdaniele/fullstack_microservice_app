@@ -83,3 +83,18 @@ localhost:3000/api/v2/users
 ```
 rake sneakers:run
 ```
+
+- Building image with processor flag
+- https://docs.docker.com/build/building/multi-platform/#:~:text=When%20triggering%20a%20build%2C%20use,one%20platform%20at%20a%20time.
+
+docker build --platform=linux/amd64 -t ccdaniele/pdrace-users-api:v1.0_postgres_linuxamd_ddon_port3000_hostallowapi .
+
+
+- Images:
+  ccdaniele/pdrace-users-api:
+  Version: v1.0
+  Database: postgres 
+  Architecture: linuxamd
+  Datadog enabled: ddon
+  Rails server: port3000
+  host accept request from (hostallow): "api"
