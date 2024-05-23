@@ -31,4 +31,14 @@
 #   <<: *default
 #   database: db/production.sqlite3
 
-### This section is for postgres in k8s 
+### This section is for postgres in k8s --- Remember install the gem pg 
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: pdrace
+  pool: 5
+  username: pdrace
+  password: password
+  host: pd-db-svc.default.svc.cluster.local
+  port: 5432 

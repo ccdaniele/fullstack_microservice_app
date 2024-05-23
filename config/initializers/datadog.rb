@@ -9,7 +9,7 @@ require 'ddtrace'
 
 Datadog.configure do |c|
 
-  c.agent.port = 8136
+  c.agent.port = 8126
   c.tracing.instrument :rails
   # c.agent.host = 'datadog-pdrace.default.svc.cluster.local'
 
@@ -32,6 +32,6 @@ Datadog.configure do |c|
   # c.runtime_metrics.statsd = Datadog::Statsd.new
 
 ###(Startup logs)
-  c.diagnostics.startup_logs.enabled = false
-  c.diagnostics.debug = true
+  c.diagnostics.startup_logs.enabled = true
+  c.diagnostics.debug = false
 end

@@ -162,6 +162,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.5-x86_64-linux)
       racc (~> 1.4)
+    pg (1.5.6)
     psych (5.1.2)
       stringio
     puma (6.4.2)
@@ -223,9 +224,6 @@ GEM
       rake
       serverengine (~> 2.0.5)
       thor
-    sqlite3 (1.7.3-arm64-darwin)
-    sqlite3 (1.7.3-x86_64-darwin)
-    sqlite3 (1.7.3-x86_64-linux)
     stringio (3.1.0)
     thor (1.3.1)
     timeout (0.4.1)
@@ -251,12 +249,12 @@ DEPENDENCIES
   debug
   json (~> 2.7, >= 2.7.1)
   lograge
+  pg (~> 1.5, >= 1.5.4)
   puma (>= 5.0)
   rack-cors
   rails (~> 7.1.1)
   smarter_csv (~> 1.1, >= 1.1.4)
   sneakers
-  sqlite3 (~> 1.4)
   tzinfo-data
 
 RUBY VERSION
